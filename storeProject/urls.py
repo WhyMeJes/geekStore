@@ -20,7 +20,7 @@ from products.views import index, products, test_context
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',index,name='Main Page'), #Пустой адрес в начале, тк это главная страница
-    path('products/',products,name='Products page'),
+    path('',index,name='index'), #Пустой адрес в начале, тк это главная страница
+    path('products/',products,name='products'),
     path('test-context/',test_context,name='test context')
 ]
