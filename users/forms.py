@@ -9,3 +9,8 @@ class UserLoginForm(AuthenticationForm):
     class Meta:
         model = User
         fields = ('username', 'password')
+
+    def __int__(self,*args,**kwargs):
+        super(UserLoginForm, self).__init__(*args,**kwargs)
+        for field_name in self.fields.items():
+            field_name.widget.attrs['class'] = 'form-control py-4'
