@@ -22,9 +22,10 @@ from django.conf import settings
 
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('admin/', admin.site.urls,name = 'admin'),
     path('',index,name='index'), #Пустой адрес в начале, тк это главная страница
     path('products/',include('products.urls',namespace='products')),
+    path('users/',include('users.urls',namespace='users'))
 ]
 
 if settings.DEBUG:
