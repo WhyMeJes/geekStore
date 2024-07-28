@@ -4,3 +4,4 @@ from products.models import ProductCategory, Products, Basket
 # Register your models here.
 admin.site.register(ProductCategory)
 admin.site.register(Products)
+admin.site.register(Basket)
